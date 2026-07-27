@@ -25,11 +25,11 @@
     <dependencies>
 
         <!-- JUnit Testing -->
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit-dep</artifactId>
-            <scope>test</scope>
-        </dependency>
+<dependency>
+    <groupId>junit</groupId>
+    <artifactId>junit</artifactId>
+    <scope>test</scope>
+</dependency>
 
         <!-- Hamcrest (replaces hamcrest-core + hamcrest-library) -->
         <dependency>
