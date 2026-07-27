@@ -24,6 +24,7 @@
         <module>webapp</module>
     </modules>
 
+
     <distributionManagement>
         <site>
             <id>site-server</id>
@@ -32,11 +33,13 @@
         </site>
     </distributionManagement>
 
+
     <build>
 
         <pluginManagement>
             <plugins>
 
+                <!-- Java Compiler -->
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
@@ -46,6 +49,8 @@
                     </configuration>
                 </plugin>
 
+
+                <!-- WAR Plugin -->
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-war-plugin</artifactId>
@@ -55,30 +60,40 @@
                     </configuration>
                 </plugin>
 
+
+                <!-- Test Plugin -->
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-surefire-plugin</artifactId>
                     <version>3.5.0</version>
                 </plugin>
 
+
+                <!-- Site Plugin -->
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-site-plugin</artifactId>
                     <version>4.0.0-M16</version>
                 </plugin>
 
+
+                <!-- Javadoc -->
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-javadoc-plugin</artifactId>
                     <version>3.8.0</version>
                 </plugin>
 
+
+                <!-- Project Info -->
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-project-info-reports-plugin</artifactId>
                     <version>3.8.0</version>
                 </plugin>
 
+
+                <!-- Jetty -->
                 <plugin>
                     <groupId>org.mortbay.jetty</groupId>
                     <artifactId>jetty-maven-plugin</artifactId>
@@ -88,12 +103,14 @@
             </plugins>
         </pluginManagement>
 
+
         <plugins>
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
             </plugin>
+
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -104,9 +121,13 @@
 
     </build>
 
+
     <dependencyManagement>
+
         <dependencies>
 
+
+            <!-- Servlet API -->
             <dependency>
                 <groupId>javax.servlet</groupId>
                 <artifactId>servlet-api</artifactId>
@@ -114,6 +135,8 @@
                 <scope>provided</scope>
             </dependency>
 
+
+            <!-- JSP API -->
             <dependency>
                 <groupId>javax.servlet.jsp</groupId>
                 <artifactId>jsp-api</artifactId>
@@ -121,6 +144,8 @@
                 <scope>provided</scope>
             </dependency>
 
+
+            <!-- JUnit -->
             <dependency>
                 <groupId>junit</groupId>
                 <artifactId>junit-dep</artifactId>
@@ -128,20 +153,17 @@
                 <scope>test</scope>
             </dependency>
 
+
+            <!-- Hamcrest -->
             <dependency>
                 <groupId>org.hamcrest</groupId>
-                <artifactId>hamcrest-core</artifactId>
+                <artifactId>hamcrest</artifactId>
                 <version>2.2</version>
                 <scope>test</scope>
             </dependency>
 
-            <dependency>
-                <groupId>org.hamcrest</groupId>
-                <artifactId>hamcrest-library</artifactId>
-                <version>2.2</version>
-                <scope>test</scope>
-            </dependency>
 
+            <!-- Mockito -->
             <dependency>
                 <groupId>org.mockito</groupId>
                 <artifactId>mockito-core</artifactId>
@@ -149,8 +171,11 @@
                 <scope>test</scope>
             </dependency>
 
+
         </dependencies>
+
     </dependencyManagement>
+
 
     <scm>
         <connection>scm:git:https://github.com/JaiSai12345/hello-world_udemy.git</connection>
@@ -158,5 +183,6 @@
         <tag>HEAD</tag>
         <url>https://github.com/JaiSai12345/hello-world_udemy</url>
     </scm>
+
 
 </project>
